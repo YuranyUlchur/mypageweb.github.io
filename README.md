@@ -1,6 +1,7 @@
 # Proyecto Personal - Práctica de Habilidades con Bootstrap💗👋
 
-<img align="center" src="https://media.tenor.com/LSDeBe2JAfoAAAAC/cat-coding.gif" /></a>
+<img align="center" src="https://media.tenor.com/ZtuVwa_2f1oAAAAC/kobayashi-san-chi-no-maid-dragon-anime.gif" /></a>
+
 ¡Bienvenido al repositorio de mi proyecto personal🙋🏻‍♀️! Aquí encontrarás detalles sobre mi, contatos y proyectos
 con Bootstrap para mejorar mis habilidades de desarrollo web.
 
@@ -11,11 +12,10 @@ El objetivo de este proyecto es aplicar mis conocimientos en el uso de Bootstrap
 
 ## Instalación y Uso📤📍
 
-1. Clona este repositorio en tu máquina local utilizando el siguiente comando:
+    1. Clona este repositorio en tu máquina local utilizando el siguiente comando:
+        https://github.com/YuranyUlchur/MyPageWeb.github.io.git
 
-    https://github.com/YuranyUlchur/MyPageWeb.github.io.git
-
-2. Abre el archivo `index.html` en tu navegador web para ver el proyecto en acción.
+    2. Abre el archivo `index.html` en tu navegador web para ver el proyecto en acción.
 
 
 ### Authors ✍🏻
