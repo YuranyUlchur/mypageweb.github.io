@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './styles/pages.module.css'
+import styles from './header.module.css';
 import { AiOutlineHeart } from 'react-icons/ai';
 
 const HeaderSection = () => {

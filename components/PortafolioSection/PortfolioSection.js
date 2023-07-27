@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import styles from './styles/pages.module.css';
+import styles from './portafolio.module.css';
 
 const PortfolioSection = () => {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -13,6 +13,7 @@ const PortfolioSection = () => {
             imageSrc: "/img/simpleshell.jpg",
             description: "Implementación de un intérprete de linux que tiene un comportamiento similar al comando sh en linux, maneja conceptos del kernel de linux, llamadas al sistema y otros.",
             Habilidades: ["C", "Bash"],
+            link: "https://github.com/YuranyUlchur/holbertonschool-simple_shell",
         },
         {
             id: 2,
@@ -20,6 +21,7 @@ const PortfolioSection = () => {
             imageSrc: "/img/calculadora.jpeg",
             description: "Calculadora creada para conocer el lenguaje de React y colocar en practica mis habilidades",
             Habilidades: ["React.js", "Next.js"],
+            link: "https://github.com/YuranyUlchur/calculatornext",
         },
         {
             id: 3,
@@ -27,6 +29,7 @@ const PortfolioSection = () => {
             imageSrc: "/img/holbietalenhub.jpeg",
             description: "Proyecto hecho para la empresa Coderise, donde se realizo un sistema de reclutamiento entre empresas y estudiantes llamado Holbie Talent Hub.",
             Habilidades: ["HTML", "SCSS", "TypeScript", "React.js", "Next.js", "JavaScript"],
+            link: "https://github.com/YuranyUlchur/holbie-talent-hub-client",
         },
     ];
 
@@ -53,6 +56,7 @@ const PortfolioSection = () => {
             <div className={styles.containerimgfluid}>
                 {projects.map((project) => (
                     <div key={project.id}>
+
                         <img
                             className={styles.imgfluid}
                             src={project.imageSrc}
@@ -79,6 +83,17 @@ const PortfolioSection = () => {
                                 ))}
                         </ul>
                     </div>
+                    {projects.find((project) => project.id === selectedProject).link && (
+                        <div>
+                            <a
+                                href={projects.find((project) => project.id === selectedProject).link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Ver enlace del proyecto
+                            </a>
+                        </div>
+                    )}
                 </div>
             )}
         </section>

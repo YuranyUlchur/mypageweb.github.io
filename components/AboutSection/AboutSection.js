@@ -1,13 +1,11 @@
 import React from 'react';
-import styles from './styles/pages.module.css'
+import styles from './about.module.css';
 
 const AboutSection = () => {
     return (
         <section className={`${styles.pageSection} ${styles.about}`} id="about">
             <div>
                 <h2 className={styles.pageSectionHeading}>Acerca de mi</h2>
-                <div className={styles.dividerCustom}>
-                </div>
                 <div className={styles.row}>
                     <div>
                         <p>

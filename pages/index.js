@@ -1,9 +1,9 @@
 import React from 'react';
-import { AboutSection } from '../components/AboutSection';
-import { Navbar } from '../components/Navbar';
-import { HeaderSection } from '../components/HeaderSection';
-import { PortfolioSection } from '../components/PortfolioSection';
-import { Footer } from '../components/Footer';
+import { AboutSection } from '../components/AboutSection/AboutSection';
+import { Navbar } from '../components/Navbar/Navbar';
+import { HeaderSection } from '../components/HeaderSection/HeaderSection';
+import { PortfolioSection } from '../components/PortafolioSection/PortfolioSection';
+import { Footer } from '../components/Footer/Footer';
 
 
 const App = () => {
