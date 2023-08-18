@@ -1,6 +1,6 @@
 .masthead {
     padding: 100px 0;
-    background-image: url('https://img.freepik.com/vector-premium/fondo-oscuro-ondulado_23-2148421508.jpg?w=740');
+    background-image: url('https://img.freepik.com/foto-gratis/fondo-textura-pintura-veteada-liquida-pintura-fluida-textura-abstracta-mezcla-colores-intensos-papel-tapiz_1258-103036.jpg?w=996&t=st=1692324292~exp=1692324892~hmac=b88c7ec36e3ff387701936e074f6db135300e3173f0aea4fe505ac44fdecc923');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -16,36 +16,23 @@
 }
 
 .mastheadHeading {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
+    max-width: 800px;
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 300;
+    padding-bottom: 3.6rem;
+    color: rgba(255, 255, 255, 0.5);
 }
 
-.dividerCustom {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.dividerCustomLine {
-    flex-grow: 3;
-    height: 1px;
-    background-color: rgb(245, 245, 240);
-}
-
-.dividerCustomIcon {
-    margin: 0 20px;
-    color:  rgb(245, 245, 240);
-}
-
-.mastheadHeading {
-    text-align: center;
-    color:  rgb(245, 245, 240);
-}
 
 .titleprofession {
-    text-align: center;
-    font-size: 20px;
-    color: rgb(245, 245, 240);
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 56px;
+    width: max-content;
+    max-width: 100%;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 16px;
+    background: linear-gradient(121.57deg, rgb(255, 255, 255) 18.77%, rgba(255, 255, 255, 0.66) 60.15%) text;
+    padding: 0px;
 }
