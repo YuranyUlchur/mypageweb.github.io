@@ -14,8 +14,8 @@ const App = () => {
 
           margin: 0;
           padding: 0;
-          background color: rgb(15, 22, 36);
-      `}</style>
+          background-color:rgb(15, 22, 36);
+          `}</style>
             <Navbar />
             <HeaderSection />
             <PortfolioSection />
