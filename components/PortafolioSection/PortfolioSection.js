@@ -26,7 +26,7 @@ const PortfolioSection = () => {
         {
             id: 3,
             title: "Holbie talen hub",
-            imageSrc: "holbietalenhub.jpeg",
+            imageSrc: "img/holbietalenhub.jpeg",
             description: "Proyecto hecho para la empresa Coderise, donde se realizo un sistema de reclutamiento entre empresas y estudiantes llamado Holbie Talent Hub.",
             Habilidades: ["HTML", "SCSS", "TypeScript", "React.js", "Next.js", "JavaScript"],
             link: "https://github.com/YuranyUlchur/holbie-talent-hub-client",
