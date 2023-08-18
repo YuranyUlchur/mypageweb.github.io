@@ -10,7 +10,7 @@ const Footer = () => {
             <footer className={styles.footer} id='contact'>
                 <div className={styles.rowfooter}>
                     <div>
-                        <h4 className={styles.titlelocation}>Locación</h4>
+                        <h4 className={styles.titlelocation}>Ubicación</h4>
                         <p className={styles.plocation}>Cali - Colombia</p>
                     </div>
                     <div className={styles.dividerCustom}>
