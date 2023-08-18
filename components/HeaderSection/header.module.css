@@ -1,6 +1,6 @@
 .masthead {
     padding: 100px 0;
-    background-image: url('https://img.freepik.com/vector-premium/fondo-dinamico-creativo-colorido-moderno-abstracto-bandera-resumenes-coloridos-degradados-vivos-moda-papel-tapiz-diseno-futurista-pancarta-poster-portada-volante-presentacion-pagina-destino_181182-16655.jpg?w=996');
+    background-image: url('https://img.freepik.com/fotos-premium/nina-que-trabaja-computadora-portatil-representacion-3d-estilo-dibujos-animados_772449-12244.jpg?w=826');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -8,27 +8,13 @@
 }
 
 .mastheadHeading {
-    max-width: 800px;
-    font-size: 24px;
-    line-height: 40px;
-    font-weight: 300;
-    padding-bottom: 3.6rem;
-    color: rgba(255, 255, 255, 0.5);
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
-
 
 .titleprofession {
-    max-width: 800px;
-    font-size: 24px;
-    line-height: 40px;
-    font-weight: 300;
-    padding-bottom: 3.6rem;
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.containerheading{
     text-align: center;
-    margin-left: 30px;
-    height: 100%;
-    width: 100%;
+    font-size: 20px;
+    color: rgb(44, 44, 42);
 }
