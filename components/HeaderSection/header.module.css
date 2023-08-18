@@ -1,11 +1,9 @@
 .masthead {
     padding: 100px 0;
-    background-image: url('https://img.freepik.com/vector-gratis/diseno-ondulado-fondo-vibrante_23-2148498782.jpg?w=740&t=st=1692330717~exp=1692331317~hmac=e65c6ce1d0eae74fb62af94f8f987f24a116ce7c127ebf8d373a74f9591ac4e6');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 600px;
-
+    height: 400px;
 }
 
 .mastheadHeading {
@@ -14,13 +12,12 @@
     margin-bottom: 20px;
     text-align: center;
     color: rgb(245, 245, 240);
-
 }
 
 .titleprofession {
     text-align: center;
     font-size: 20px;
-    color: rgb(245, 245, 240);
+    color:  rgb(245, 245, 240);
 }
 
 .containerheading {
@@ -28,5 +25,5 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-
+    margin-top: 20px;
 }

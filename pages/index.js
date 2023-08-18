@@ -11,10 +11,13 @@ const App = () => {
         <>
             <style jsx global>{`
         body {
-
-          margin: 0;
-          padding: 0;
-          background-color:rgb(15, 22, 36);
+            font-family: "Space Grotesk", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://img.freepik.com/vector-premium/fondo-estrellas-ilustracion-vectorial-realista_230920-1395.jpg?w=900');
+            background-size: cover;
+            background-repeat: no-repeat;
+            image-rendering: auto; 
           `}</style>
             <Navbar />
             <HeaderSection />
