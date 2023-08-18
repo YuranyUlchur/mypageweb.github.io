@@ -19,7 +19,7 @@ const Footer = () => {
                                 <AiOutlineHeart />
                             </div>
                             <div className={styles.dividerCustomLine}></div>
-                        </div>
+                    </div>
                     <div>
                         <h4 className={styles.titlecontact}>Contacto</h4>
                         <div className={styles.iconscontact}>
