@@ -10,7 +10,7 @@ const PortfolioSection = () => {
         {
             id: 1,
             title: "Simple shell",
-            imageSrc: "/public/img/simpleshell.jpg",
+            imageSrc: "./public/img/simpleshell.jpg",
             description: "Implementación de un intérprete de linux que tiene un comportamiento similar al comando sh en linux, maneja conceptos del kernel de linux, llamadas al sistema y otros.",
             Habilidades: ["C", "Bash"],
             link: "https://github.com/YuranyUlchur/holbertonschool-simple_shell",
@@ -18,7 +18,7 @@ const PortfolioSection = () => {
         {
             id: 2,
             title: "Calculadora con React",
-            imageSrc: "/public/img/calculadora.jpeg",
+            imageSrc: "img/calculadora.jpeg",
             description: "Calculadora creada para conocer el lenguaje de React y colocar en practica mis habilidades",
             Habilidades: ["React.js", "Next.js"],
             link: "https://github.com/YuranyUlchur/calculatornext",
@@ -26,7 +26,7 @@ const PortfolioSection = () => {
         {
             id: 3,
             title: "Holbie talen hub",
-            imageSrc: "/public/img/holbietalenhub.jpeg",
+            imageSrc: "/img/holbietalenhub.jpeg",
             description: "Proyecto hecho para la empresa Coderise, donde se realizo un sistema de reclutamiento entre empresas y estudiantes llamado Holbie Talent Hub.",
             Habilidades: ["HTML", "SCSS", "TypeScript", "React.js", "Next.js", "JavaScript"],
             link: "https://github.com/YuranyUlchur/holbie-talent-hub-client",
