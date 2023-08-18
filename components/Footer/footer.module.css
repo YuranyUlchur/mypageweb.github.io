@@ -52,7 +52,7 @@ a.btnSocial:hover {
     background-color:rgb(245, 245, 240);
     padding: 10px 0;
     text-align: center;
-    color: #fff;
+    color: rgb(121, 116, 107);
 }
 
 .btnSocial {
@@ -72,10 +72,10 @@ a.btnSocial:hover {
 .dividerCustomLine {
     flex-grow: 3;
     height: 1px;
-    background-color: rgb(245, 245, 240);
+    background-color: rgb(44, 44, 42);
 }
 
 .dividerCustomIcon {
     margin: 0 20px;
-    color:  rgb(245, 245, 240);
+    color: rgb(44, 44, 42);
 }
