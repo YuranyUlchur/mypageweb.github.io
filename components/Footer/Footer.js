@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaTwitter, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import styles from './footer.module.css';
+import { AiOutlineHeart } from 'react-icons/ai';
+
 
 const Footer = () => {
     return (
@@ -12,6 +14,13 @@ const Footer = () => {
                         <p className={styles.plocation}>Cali - Colombia</p>
                     </div>
                     <div>
+                        <div className={styles.dividerCustom}>
+                            <div className={styles.dividerCustomLine}></div>
+                            <div className={styles.dividerCustomIcon}>
+                                <AiOutlineHeart />
+                            </div>
+                            <div className={styles.dividerCustomLine}></div>
+                        </div>
                         <h4 className={styles.titlecontact}>Contacto</h4>
                         <div className={styles.iconscontact}>
                             <a className={styles.btnSocial} href="https://twitter.com/YuranyUlchur"><FaTwitter /></a>
