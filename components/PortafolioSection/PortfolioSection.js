@@ -90,7 +90,7 @@ const PortfolioSection = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                Ver enlace del proyecto
+                                <button className={styles.buttonlink}>Ver enlace del proyecto</button>
                             </a>
                         </div>
                     )}

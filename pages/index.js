@@ -11,13 +11,11 @@ const App = () => {
         <>
             <style jsx global>{`
         body {
-            font-family: "Space Grotesk", sans-serif;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://img.freepik.com/vector-premium/fondo-estrellas-ilustracion-vectorial-realista_230920-1395.jpg?w=900');
-            background-size: cover;
-            background-repeat: no-repeat;
-            image-rendering: auto; 
+            background-image: url('https://w0.peakpx.com/wallpaper/622/373/HD-wallpaper-black-space-black-star-stars.jpg');
+
           `}</style>
             <Navbar />
             <HeaderSection />

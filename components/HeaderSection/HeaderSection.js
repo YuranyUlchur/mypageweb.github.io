@@ -11,8 +11,8 @@ const HeaderSection = () => {
                 </div>
             </div>
         </header>
-
     );
 };
 
 export { HeaderSection };
+
