@@ -15,10 +15,10 @@ const Navbar = () => {
                             <a className={styles.navLink} href="#portfolio">Portfolio</a>
                         </li>
                         <li>
-                            <a className={styles.navLink} href="#about">About</a>
+                            <a className={styles.navLink} href="#about">Sobre mi</a>
                         </li>
                         <li>
-                            <a className={styles.navLink} href="#contact">Contact</a>
+                            <a className={styles.navLink} href="#contact">Contacto</a>
                         </li>
                     </ul>
                 </div>

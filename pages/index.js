@@ -4,6 +4,8 @@ import { Navbar } from '../components/Navbar/Navbar';
 import { HeaderSection } from '../components/HeaderSection/HeaderSection';
 import { PortfolioSection } from '../components/PortafolioSection/PortfolioSection';
 import { Footer } from '../components/Footer/Footer';
+import { ContactForm } from '../components/ContactForm/ContactForm';
+
 
 
 
@@ -23,6 +25,7 @@ const App = () => {
             <HeaderSection />
             <PortfolioSection />
             <AboutSection />
+            <ContactForm />
             <Footer />
 
         </>
