@@ -6,6 +6,7 @@ import { PortfolioSection } from '../components/PortafolioSection/PortfolioSecti
 import { Footer } from '../components/Footer/Footer';
 
 
+
 const App = () => {
     return (
         <>
@@ -17,6 +18,7 @@ const App = () => {
             background-image: url('https://w0.peakpx.com/wallpaper/622/373/HD-wallpaper-black-space-black-star-stars.jpg');
 
           `}</style>
+            <title>Portafolio Yurany</title>
             <Navbar />
             <HeaderSection />
             <PortfolioSection />
