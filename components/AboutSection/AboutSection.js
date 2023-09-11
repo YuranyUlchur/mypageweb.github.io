@@ -7,7 +7,7 @@ const AboutSection = () => {
             <div>
                 <h2 className={styles.pageSectionHeading}>Acerca de mi</h2>
                 <div className={styles.row}>
-                    <div>
+                    <div className={styles.boxabout}>
                         <p>
                         Soy un desarrolladora de software apasionada con habilidades en C, Python, SQL y JavaScript.
                         Mi enfoque se basa en la dedicación y la persistencia para superar cualquier reto que se me presente.

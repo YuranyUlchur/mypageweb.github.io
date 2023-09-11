@@ -8,12 +8,14 @@
     margin-top: 100px;
     text-align: center;
     color: rgb(245, 245, 240);
+
 }
 
-.about p {
+.boxabout {
     max-width: 800px;
     margin: 0 auto;
     font-size: 18px;
     line-height: 1.6;
     color: rgb(245, 245, 240);
+    padding: 50px;
 }

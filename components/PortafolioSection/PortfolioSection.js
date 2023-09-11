@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './portafolio.module.css';
+import Carousel from 'react-bootstrap/Carousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const PortfolioSection = () => {
     const [selectedProject, setSelectedProject] = useState(null);
     const cardRef = useRef(null);
-
 
     const projects = [
         {
@@ -31,6 +33,14 @@ const PortfolioSection = () => {
             Habilidades: ["HTML", "SCSS", "TypeScript", "React.js", "Next.js", "JavaScript"],
             link: "https://github.com/YuranyUlchur/holbie-talent-hub-client",
         },
+        {
+            id: 4,
+            title: "Film Catalog",
+            imageSrc: "img/movies.jpg",
+            description: "Proyecto hecho para desarrollar habilidades y colocar en practica conocimientos",
+            Habilidades: ["HTML", "CSS", "React-Bootstrap", "React.js", "JavaScript"],
+            link: "https://github.com/YuranyUlchur/Project-film-catalog",
+        },
     ];
 
     useEffect(() => {
@@ -54,25 +64,25 @@ const PortfolioSection = () => {
         <section id="portfolio">
             <h2 className={styles.pageSectionHeading}>Portfolio</h2>
             <div className={styles.containerimgfluid}>
-                {projects.map((project) => (
-                    <div key={project.id}>
-
-                        <img
-                            className={styles.imgfluid}
-                            src={project.imageSrc}
-                            alt={project.title}
-                            onClick={() => handleImageClick(project.id)}
-                        />
-                    </div>
-                ))}
+                <Carousel prevLabel="" nextLabel="" prevIcon={<span className={styles.customPrevArrow}>&#8249;</span>} nextIcon={<span className={styles.customNextArrow}>&#8250;</span>}>
+                    {projects.map((project) => (
+                        <Carousel.Item key={project.id} onClick={() => handleImageClick(project.id)}>
+                            <img
+                                className={styles.imgfluid}
+                                src={project.imageSrc}
+                                alt={project.title}
+                            />
+                        </Carousel.Item>
+                    ))}
+                </Carousel>
             </div>
 
             {selectedProject && (
                 <div className={styles.projectCard} ref={cardRef}>
                     <h3>{projects.find((project) => project.id === selectedProject).title}</h3>
-                    <p>{projects.find((project) => project.id === selectedProject).description}</p>
 
-                    {/* Agregar las aptitudes después de la descripción */}
+                    <p>{projects.find((project) => project.id === selectedProject).description}</p>
+                    
                     <div>
                         <h4>Habilidades:</h4>
                         <ul>

@@ -1,28 +1,18 @@
-.containerimgfluid {
-    display: flex;
-    justify-content: center;
-}
-
-.pageSectionHeading {
-    font-size: 40px;
-    font-weight: bold;
-    margin-top: 100px;
-    text-align: center;
-    color: rgb(245, 245, 240);
-}
 
 .pageSection {
     padding: 80px 0;
 }
 
-.imgfluid {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 20%;
+.containerimgfluid {
+    text-align: center;
+    margin-top: 100px;
 }
+
+.carousel {
+    margin: 20px auto;
+    max-width: 80%;
+}
+
 
 .projectCard {
     position: fixed;
@@ -30,10 +20,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #f8d1e0;
-    padding: 80px;
+    padding: 70px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    max-width: 300px;
+    max-width: 500px;
 }
 
 .projectCard:hover {
@@ -48,5 +38,44 @@
     border-radius: 30px;
     background-color: rgb(156, 245, 245);
     cursor: pointer;
-    right: 20px; 
+    right: 20px;
 }
+
+.buttonlink:hover {
+    background-color: #5e89b8;
+}
+
+.imgfluid {
+    width: 400%;
+    max-width: 500px;
+    height: auto;
+    padding: 40px;
+    border-radius: 20%;
+}
+
+.pageSectionHeading {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 190px;
+    text-align: center;
+    color: rgb(245, 245, 240);
+}
+
+.carousel {
+    margin: 20px auto;
+    max-width: 80%;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.customPrevArrow {
+    font-size: 50px;
+    color: rgb(156, 245, 245);
+
+}
+
+.customNextArrow {
+    font-size: 50px;
+    color: rgb(156, 245, 245);
+}
+
