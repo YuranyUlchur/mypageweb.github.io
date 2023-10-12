@@ -5,9 +5,7 @@ import { HeaderSection } from '../components/HeaderSection/HeaderSection';
 import { PortfolioSection } from '../components/PortafolioSection/PortfolioSection';
 import { Footer } from '../components/Footer/Footer';
 import { ContactForm } from '../components/ContactForm/ContactForm';
-
-
-
+import { SkillsSection } from '../components/SkillsSection/SkillsSection';
 
 const App = () => {
     return (
@@ -25,6 +23,7 @@ const App = () => {
             <HeaderSection />
             <PortfolioSection />
             <AboutSection />
+            <SkillsSection/>
             <ContactForm />
             <Footer />
 

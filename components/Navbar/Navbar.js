@@ -1,29 +1,25 @@
 import React from 'react';
-import styles from './navbar.module.css';
+import { Navbar as BootstrapNavbar, Nav } from 'react-bootstrap';
 import { BiPlanet } from "react-icons/bi";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import styles from './navbar.module.css';
 
 const Navbar = () => {
     return (
-        <nav className={styles.navbar}>
-            <div className={styles.container}>
-                <a className={styles.navbarBrand} href="#page-top">
-                    <BiPlanet/>
-                    MiPortafolio</a>
-                <div className={styles.containernav}>
-                    <ul>
-                        <li>
-                            <a className={styles.navLink} href="#portfolio">Portfolio</a>
-                        </li>
-                        <li>
-                            <a className={styles.navLink} href="#about">Sobre mi</a>
-                        </li>
-                        <li>
-                            <a className={styles.navLink} href="#contact">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <BootstrapNavbar bg="transparent" variant="dark" expand="lg" className={styles.navbar}>
+            <BootstrapNavbar.Brand href="#page-top" className={` px-5 ${styles.navbarBrand}`}>
+                <BiPlanet /> MiPortafolio
+            </BootstrapNavbar.Brand>
+            <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
+            <BootstrapNavbar.Collapse id="basic-navbar-nav" className={`justify-content-end ${styles.containernav} px-5`}>
+                <Nav>
+                    <Nav.Link href="#portfolio" className={styles.navLink}>Portfolio</Nav.Link>
+                    <Nav.Link href="#about" className={styles.navLink}>Sobre mi</Nav.Link>
+                    <Nav.Link href="#skills" className={styles.navLink}>Habilidades</Nav.Link>
+                    <Nav.Link href="#contact" className={styles.navLink}>Contacto</Nav.Link>
+                </Nav>
+            </BootstrapNavbar.Collapse>
+        </BootstrapNavbar>
     );
 };
 

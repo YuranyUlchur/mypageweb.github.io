@@ -6,13 +6,12 @@ const ContactForm = () => {
     const [mensaje, setMensaje] = useState('');
     const [correoEnviado, setCorreoEnviado] = useState(false);
 
-    // Estados iniciales para los campos del formulario
     const initialState = {
         nombre: '',
         email: '',
         mensaje: ''
     };
-    
+
     const [formularioData, setFormularioData] = useState(initialState);
 
     const enviarEmail = (e) => {
@@ -23,7 +22,6 @@ const ContactForm = () => {
                 console.log(res);
                 setMensaje('Correo enviado con éxito✔️');
                 setCorreoEnviado(true);
-                // Reiniciar los campos del formulario
                 setFormularioData(initialState);
             })
             .catch((error) => {
@@ -35,7 +33,6 @@ const ContactForm = () => {
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        // Actualizar el estado del formulario con los nuevos valores
         setFormularioData({
             ...formularioData,
             [name]: value
@@ -56,8 +53,8 @@ const ContactForm = () => {
                                 className={style.formcontrol}
                                 id="nombre"
                                 name="nombre"
-                                value={formularioData.nombre} // Establecer el valor del campo
-                                onChange={handleInputChange} // Manejar cambios en el campo
+                                value={formularioData.nombre}
+                                onChange={handleInputChange}
                             />
                         </div>
                         <div className={style.formgroup}>

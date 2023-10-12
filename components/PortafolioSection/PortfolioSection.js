@@ -62,7 +62,7 @@ const PortfolioSection = () => {
 
     return (
         <section id="portfolio">
-            <h2 className={styles.pageSectionHeading}>Portfolio</h2>
+            <h2 className={styles.pageSectionHeading}>Portafolio</h2>
             <div className={styles.containerimgfluid}>
                 <Carousel prevLabel="" nextLabel="" prevIcon={<span className={styles.customPrevArrow}>&#8249;</span>} nextIcon={<span className={styles.customNextArrow}>&#8250;</span>}>
                     {projects.map((project) => (

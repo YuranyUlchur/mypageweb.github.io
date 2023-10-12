@@ -19,3 +19,25 @@
     color: rgb(245, 245, 240);
     padding: 50px;
 }
+
+@media (max-width: 768px) {
+
+    .paragraph {
+        margin-bottom: 90px;
+    }
+
+    .pageSection {
+        padding: 40px 0;
+    }
+
+    .pageSectionHeading {
+        font-size: 40px;
+        margin-top: 60px;
+
+    }
+
+    .boxabout {
+        max-width: 100%;
+        padding: 20px;
+    }
+}

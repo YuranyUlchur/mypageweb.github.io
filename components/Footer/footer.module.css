@@ -51,7 +51,7 @@ a.btnSocial:hover {
     background-color: #41454c;
     padding: 10px 0;
     text-align: center;
-    color:  rgb(245, 245, 240);
+    color: rgb(245, 245, 240);
 }
 
 .btnSocial {
@@ -71,10 +71,29 @@ a.btnSocial:hover {
 .dividerCustomLine {
     flex-grow: 3;
     height: 1px;
-    background-color:  rgb(245, 245, 240);
+    background-color: rgb(245, 245, 240);
 }
 
 .dividerCustomIcon {
     margin: 0 20px;
     color: rgb(245, 245, 240);
+}
+
+@media (max-width: 768px) {
+    .rowfooter {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .titlelocation,
+    .plocation,
+    .titlecontact,
+    .iconscontact {
+        margin: 0;
+    }
+
+    .btnSocial {
+        width: 100%;
+        max-width: none;
+    }
 }
