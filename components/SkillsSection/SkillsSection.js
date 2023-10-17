@@ -5,7 +5,7 @@ import { AiFillGithub } from "react-icons/ai";
 
 const skillsData = {
     frontend: [
-        { name: 'React', level: 'Avanzado', image: 'https://assets.stickpng.com/images/584830f5cef1014c0b5e4aa1.png' },
+        { name: 'React', level: 'Avanzado', image: 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png' },
         { name: 'HTML', level: 'Avanzado', image: 'https://cdn-icons-png.flaticon.com/512/174/174854.png' },
         { name: 'CSS', level: 'Intermedio', image: 'https://cdn-icons-png.flaticon.com/512/888/888847.png' },
         { name: 'Javascript', level: 'Intermedio', image: 'https://cdn-icons-png.flaticon.com/512/5968/5968292.png' },
@@ -13,7 +13,7 @@ const skillsData = {
     ],
     backend: [
         { name: 'Node.js', level: 'Basico', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png' },
-        { name: 'Python', level: 'Avanzado', image: 'https://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png' },
+        { name: 'Python', level: 'Avanzado', image: 'https://cdn-icons-png.flaticon.com/512/5968/5968350.png' },
         { name: 'MySql', level: 'Competente', image: 'https://1000marcas.net/wp-content/uploads/2020/11/MySQL-logo.png' },
         { name: 'SQL', level: 'Competente', image: 'https://cdn-icons-png.flaticon.com/512/337/337953.png' },
         { name: 'Git', level: 'Avanzado', image: 'https://www.espai.es/blog/wp-content/uploads/2018/09/git.jpg' },
