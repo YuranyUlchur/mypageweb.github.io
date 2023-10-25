@@ -1,111 +1,110 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import styles from './portafolio.module.css';
-import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { VscTerminal } from "react-icons/vsc";
+import { renderToString } from 'react-dom/server';
+import { BiCalculator, BiFace, BiMoviePlay } from "react-icons/bi";
+
 
 
 const PortfolioSection = () => {
-    const [selectedProject, setSelectedProject] = useState(null);
-    const cardRef = useRef(null);
+    const [showSkills, setShowSkills] = useState(null);
 
     const projects = [
         {
             id: 1,
             title: "Simple shell",
-            imageSrc: "img/simpleshell.jpg",
+            imageSrc: renderToString(<VscTerminal  style={{ color: 'white' }} />),
             description: "Implementación de un intérprete de linux que tiene un comportamiento similar al comando sh en linux, maneja conceptos del kernel de linux, llamadas al sistema y otros.",
-            Habilidades: ["C", "Bash"],
+            Habilidades: ["C y", "Bash."],
             link: "https://github.com/YuranyUlchur/holbertonschool-simple_shell",
         },
         {
             id: 2,
             title: "Calculadora con React",
-            imageSrc: "img/calculadora.jpeg",
-            description: "Calculadora creada para conocer el lenguaje de React y colocar en practica mis habilidades",
-            Habilidades: ["React.js", "Next.js"],
+            imageSrc: renderToString(<BiCalculator style={{ color: 'white' }} />),
+            description: "Calculadora creada en comienzos de aprendizaje de React, colocando en practica mis habilidades y conocimientos en ese momento.",
+            Habilidades: ["React.js y", "Next.js."],
             link: "https://github.com/YuranyUlchur/calculatornext",
         },
         {
             id: 3,
             title: "Holbie talen hub",
-            imageSrc: "img/holbietalenhub.jpeg",
+            imageSrc: renderToString(<BiFace style={{ color: 'white' }}/>),
             description: "Proyecto hecho para la empresa Coderise, donde se realizo un sistema de reclutamiento entre empresas y estudiantes llamado Holbie Talent Hub.",
-            Habilidades: ["HTML", "SCSS", "TypeScript", "React.js", "Next.js", "JavaScript"],
+            Habilidades: ["HTML,", "SCSS,", "TypeScript,", "React.js,", "Next.js y", "JavaScript."],
             link: "https://github.com/YuranyUlchur/holbie-talent-hub-client",
+
         },
         {
             id: 4,
             title: "Film Catalog",
-            imageSrc: "img/movies.jpg",
+            imageSrc: renderToString(<BiMoviePlay style={{ color: 'white' }}/>),
             description: "Proyecto hecho para desarrollar habilidades y colocar en practica conocimientos",
-            Habilidades: ["HTML", "CSS", "React-Bootstrap", "React.js", "JavaScript"],
+            Habilidades: ["HTML,", "CSS,", "React-Bootstrap,", "React.js y", "JavaScript."],
             link: "https://github.com/YuranyUlchur/Project-film-catalog",
         },
     ];
 
-    useEffect(() => {
-        const handleOutsideClick = (event) => {
-            if (cardRef.current && !cardRef.current.contains(event.target)) {
-                setSelectedProject(null);
-            }
-        };
-
-        document.addEventListener('mousedown', handleOutsideClick);
-        return () => {
-            document.removeEventListener('mousedown', handleOutsideClick);
-        };
-    }, []);
-
-    const handleImageClick = (projectId) => {
-        setSelectedProject(projectId);
+    const handleSkillsClick = () => {
+        setShowSkills((prevShowSkills) => !prevShowSkills);
     };
+
 
     return (
         <section id="portfolio">
             <h2 className={styles.pageSectionHeading}>Portafolio</h2>
-            <div className={styles.containerimgfluid}>
-                <Carousel prevLabel="" nextLabel="" prevIcon={<span className={styles.customPrevArrow}>&#8249;</span>} nextIcon={<span className={styles.customNextArrow}>&#8250;</span>}>
+            <div className='container my-4'>
+                <div className="row justify-content-around">
                     {projects.map((project) => (
-                        <Carousel.Item key={project.id} onClick={() => handleImageClick(project.id)}>
-                            <img
-                                className={styles.imgfluid}
-                                src={project.imageSrc}
-                                alt={project.title}
-                            />
-                        </Carousel.Item>
-                    ))}
-                </Carousel>
-            </div>
+                        <div key={project.id} className={`card col-md-4 mb-4 ${styles.cardProjects} `}
+                            style={{
+                                background: 'transparent',
+                                color: 'white',
+                                opacity: '1',
+                                border: '10px',
+                                overflow: 'hidden',
+                                transition: 'transform 0.3s ease',
+                                boxShadow: '0 4px 8px rgba(31, 226, 226, 0.322)',
+                            }}>
+                            <div className={`card-body text-center ${styles.transparentCard}`}>
+                                <img
+                                    className="card-img-top img-fluid"
+                                    src={`data:image/svg+xml,${encodeURIComponent(project.imageSrc)}`}
+                                    alt={project.title}
+                                    style={{
+                                        maxWidth: '50px',
+                                        maxHeight: '50px',
+                                        margin: ' auto',
+                                        display: 'block',
+                                   
 
-            {selectedProject && (
-                <div className={styles.projectCard} ref={cardRef}>
-                    <h3>{projects.find((project) => project.id === selectedProject).title}</h3>
-
-                    <p>{projects.find((project) => project.id === selectedProject).description}</p>
-                    
-                    <div>
-                        <h4>Habilidades:</h4>
-                        <ul>
-                            {projects
-                                .find((project) => project.id === selectedProject)
-                                .Habilidades.map((skill) => (
-                                    <li key={skill}>{skill}</li>
-                                ))}
-                        </ul>
-                    </div>
-                    {projects.find((project) => project.id === selectedProject).link && (
-                        <div>
-                            <a
-                                href={projects.find((project) => project.id === selectedProject).link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <button className={styles.buttonlink}>Ver enlace del proyecto</button>
-                            </a>
+                                    }}
+                                />
+                                <h5 className="card-title">{project.title}</h5>
+                                <p className="card-text">{project.description}</p>
+                                <div className="d-flex flex-column align-items-center mt-auto">
+                                    <h6 onClick={handleSkillsClick} className={styles.skillsToggle}>
+                                        Habilidades {showSkills ? '▲' : '▼'}
+                                    </h6>
+                                    {showSkills && (
+                                        <div className={`${styles.skillsDropdown} mt-2`}>
+                                            <ul className="list-inline">
+                                                {project.Habilidades.map((skill) => (
+                                                    <li key={skill} className="list-inline-item">{skill}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
+                                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                                        <button className={styles.buttonlink}>Ver enlace del proyecto</button>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    )}
+                    ))}
                 </div>
-            )}
+            </div>
         </section>
     );
 };

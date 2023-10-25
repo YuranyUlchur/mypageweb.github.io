@@ -7,6 +7,7 @@ import { Footer } from '../components/Footer/Footer';
 import { ContactForm } from '../components/ContactForm/ContactForm';
 import { SkillsSection } from '../components/SkillsSection/SkillsSection';
 
+
 const App = () => {
     return (
         <>
@@ -18,12 +19,11 @@ const App = () => {
             background-image: url('https://w0.peakpx.com/wallpaper/622/373/HD-wallpaper-black-space-black-star-stars.jpg');
 
           `}</style>
-            <title>Portafolio Yurany</title>
             <Navbar />
             <HeaderSection />
             <PortfolioSection />
             <AboutSection />
-            <SkillsSection/>
+            <SkillsSection />
             <ContactForm />
             <Footer />
 

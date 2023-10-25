@@ -1,120 +1,45 @@
-.pageSection {
-    padding: 80px 0;
-}
-
-.containerimgfluid {
-    text-align: center;
+.pageSectionHeading {
+    font-size: 40px;
+    font-weight: bold;
     margin-top: 100px;
+    text-align: center;
+    color: rgb(245, 245, 240);
+
+}
+.skillsToggle {
+    cursor: pointer;
+    color: #007bff;
 }
 
-.carousel {
-    margin: 20px auto;
-    max-width: 80%;
-}
-
-.projectCard {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #f8d1e0;
-    padding: 70px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    max-width: 500px;
-}
-
-.projectCard:hover {
-    background-color: #f0b8cd;
-
+.skillsDropdown {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 10px;
 }
 
 .buttonlink {
-    position: absolute;
-    padding: 20px;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
     border: none;
-    border-radius: 30px;
-    background-color: rgb(156, 245, 245);
+    border-radius: 5px;
     cursor: pointer;
-    right: 20px;
+    transition: background-color 0.3s;
 }
 
 .buttonlink:hover {
-    background-color: #5e89b8;
-}
-
-.imgfluid {
-    width: 400%;
-    max-width: 500px;
-    height: auto;
-    padding: 40px;
-    border-radius: 20%;
+    background-color: #0056b3;
 }
 
 .pageSectionHeading {
     font-size: 40px;
     font-weight: bold;
-    margin-top: 190px;
+    margin-top: 100px;
+    margin-bottom: 40px;
     text-align: center;
     color: rgb(245, 245, 240);
-    margin-bottom: -40px;
-
-}
-
-.carousel {
-    margin: 20px auto;
-    max-width: 80%;
-    background-color: #f8f9fa;
-    padding: 20px;
-}
-
-.customPrevArrow {
-    font-size: 50px;
-    color: rgb(156, 245, 245);
-
-}
-
-.customNextArrow {
-    font-size: 50px;
-    color: rgb(156, 245, 245);
-}
-
-@media (max-width: 768px) {
-    .containerimgfluid {
-        margin-top: 50px;
-    }
-
-    .projectCard {
-        width: 80%;
-        max-width: none;
-        padding: 20px;
-    }
-
-    .buttonlink {
-        padding: 10px;
-        right: 10px;
-    }
-
-    .imgfluid {
-        max-width: 100%;
-        padding: 20px;
-        border-radius: 10%;
-    }
-
-    .pageSectionHeading {
-        font-size: 30px;
-        margin-top: 100px;
-    }
-
-    .carousel {
-        padding: 10px;
-    }
-
-    .customPrevArrow,
-    .customNextArrow {
-        font-size: 30px;
-        color: #000000;
-        font-size: 40px;
-
-    }
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './skillssection.module.css';
 import styles from './skillssection.module.css';
-import { AiFillGithub } from "react-icons/ai";
+
 
 const skillsData = {
     frontend: [
