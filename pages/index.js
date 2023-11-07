@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { AboutSection } from '../components/AboutSection/AboutSection';
 import { Navbar } from '../components/Navbar/Navbar';
 import { HeaderSection } from '../components/HeaderSection/HeaderSection';
@@ -11,6 +12,10 @@ import { SkillsSection } from '../components/SkillsSection/SkillsSection';
 const App = () => {
     return (
         <>
+            <Head>
+                <title>PortafolioYurany</title>
+                <link rel='icon' type='image/x-icon' href='/img/website.png' />
+            </Head>
             <style jsx global>{`
         body {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -19,6 +24,7 @@ const App = () => {
             background-image: url('https://w0.peakpx.com/wallpaper/622/373/HD-wallpaper-black-space-black-star-stars.jpg');
 
           `}</style>
+
             <Navbar />
             <HeaderSection />
             <PortfolioSection />
@@ -30,5 +36,6 @@ const App = () => {
         </>
     );
 };
+
 
 export default App;
