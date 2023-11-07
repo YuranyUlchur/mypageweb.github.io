@@ -14,7 +14,7 @@ const App = () => {
         <>
             <Head>
                 <title>PortafolioYurany</title>
-                <link rel='icon' type='image/x-icon' href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfObljSOB_DvDHNTgYx8N4TmnZrV2XuOfsKMZyRSCZljRNyTTQsyJWOPA9rQ2hs-lD4iA&usqp=CAU' />
+                <link rel='icon' type='image/x-icon' href='https://img.freepik.com/vector-gratis/disenos-vector-degradado-logotipo-colorido-letra_343694-1188.jpg?w=740&t=st=1699374444~exp=1699375044~hmac=a494d7f75a45c32024d00b102ee7f86636ac45750cfadcc564417ca5cf106320' />
             </Head>
             <style jsx global>{`
         body {
