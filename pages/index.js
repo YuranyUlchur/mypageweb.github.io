@@ -14,7 +14,7 @@ const App = () => {
         <>
             <Head>
                 <title>PortafolioYurany</title>
-                <link rel='icon' type='image/x-icon' href='/img/website.png' />
+                <link rel='icon' type='image/x-icon' href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfObljSOB_DvDHNTgYx8N4TmnZrV2XuOfsKMZyRSCZljRNyTTQsyJWOPA9rQ2hs-lD4iA&usqp=CAU' />
             </Head>
             <style jsx global>{`
         body {
