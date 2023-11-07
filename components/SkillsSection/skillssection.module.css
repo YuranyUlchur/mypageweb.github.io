@@ -78,7 +78,6 @@
 }
 
 .cardBody {
-    padding: 20px;
     display: flex;
     align-items: center;
 
@@ -94,7 +93,6 @@
 }
 
 @media (max-width: 768px) {
-
 
     .pageSectionHeadingSkills {
         margin-bottom: 20px;
@@ -115,5 +113,9 @@
 
     .card {
         width: 100%;
+    }
+    .cardBody {
+        padding: 20px;
+    
     }
 }
