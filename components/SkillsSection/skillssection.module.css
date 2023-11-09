@@ -78,6 +78,7 @@
 }
 
 .cardBody {
+    padding: 20px;
     display: flex;
     align-items: center;
 
@@ -114,8 +115,5 @@
     .card {
         width: 100%;
     }
-    .cardBody {
-        padding: 20px;
-    
-    }
+
 }
