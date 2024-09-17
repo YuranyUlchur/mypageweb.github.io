@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaTwitter, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import styles from './footer.module.css';
-import { AiOutlineHeart } from 'react-icons/ai';
+import { FaRegStar } from "react-icons/fa";
 
 
 const Footer = () => {
@@ -11,7 +11,7 @@ const Footer = () => {
                 <div className={styles.dividerCustom}>
                     <div className={styles.dividerCustomLine}></div>
                     <div className={styles.dividerCustomIcon}>
-                        <AiOutlineHeart />
+                        <FaRegStar />
                     </div>
                     <div className={styles.dividerCustomLine}></div>
                 </div>

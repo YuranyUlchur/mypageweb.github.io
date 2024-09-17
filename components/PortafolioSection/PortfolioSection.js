@@ -1,11 +1,21 @@
 import React, { useState } from 'react';
 import styles from './portafolio.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { VscTerminal } from "react-icons/vsc";
-import { renderToString } from 'react-dom/server';
-import { BiCalculator, BiFace, BiMoviePlay } from "react-icons/bi";
 
 
+// Define the paths to the skill images
+const skillImages = {
+    'C': 'img/c.png',
+    'Bash': 'img/bash.png',
+    'HTML': 'https://cdn-icons-png.flaticon.com/512/174/174854.png',
+    'TypeScript': 'img/typescript.png',
+    'React.js': 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png',
+    'Next.js': 'img/nextjs.png',
+    'JavaScript': 'img/javascript.png',
+    'Bootstrap': 'https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg',
+    'Redux': 'img/redux.png',
+    'CSS': 'https://cdn-icons-png.flaticon.com/512/888/888847.png',
+};
 
 const PortfolioSection = () => {
     const [showSkills, setShowSkills] = useState(null);
@@ -14,34 +24,33 @@ const PortfolioSection = () => {
         {
             id: 1,
             title: "Simple shell",
-            imageSrc: renderToString(<VscTerminal  style={{ color: 'white' }} />),
+            imageSrc: 'img/icon.png',
             description: "Implementación de un intérprete de linux que tiene un comportamiento similar al comando sh en linux, maneja conceptos del kernel de linux, llamadas al sistema y otros.",
-            Habilidades: ["C y", "Bash."],
+            Habilidades: ["C", "Bash"],
             link: "https://github.com/YuranyUlchur/holbertonschool-simple_shell",
         },
         {
-            id: 2,
-            title: "Calculadora con React",
-            imageSrc: renderToString(<BiCalculator style={{ color: 'white' }} />),
-            description: "Calculadora creada en comienzos de aprendizaje de React, colocando en practica mis habilidades y conocimientos en ese momento.",
-            Habilidades: ["React.js y", "Next.js."],
-            link: "https://github.com/YuranyUlchur/calculatornext",
+            id: 3,
+            title: "Holbie talent hub",
+            imageSrc: 'img/web.png',
+            description: "Proyecto hecho para la empresa Coderise, donde se realizo un sistema de reclutamiento entre empresas y egresados especializados en desarrollo de software llamado",
+            Habilidades: ["HTML", "CSS", "TypeScript", "React.js", "Next.js", "JavaScript"],
+            link: "https://github.com/YuranyUlchur/holbie-talent-hub-client",
         },
         {
-            id: 3,
-            title: "Holbie talen hub",
-            imageSrc: renderToString(<BiFace style={{ color: 'white' }}/>),
-            description: "Proyecto hecho para la empresa Coderise, donde se realizo un sistema de reclutamiento entre empresas y estudiantes llamado Holbie Talent Hub.",
-            Habilidades: ["HTML,", "SCSS,", "TypeScript,", "React.js,", "Next.js y", "JavaScript."],
-            link: "https://github.com/YuranyUlchur/holbie-talent-hub-client",
-
+            id: 2,
+            title: "Screen Stream",
+            imageSrc: 'img/user.png',
+            description: "Desarrollo y consumo de API para datos multimedia y comunicación con API de peliculas",
+            Habilidades: ["React.js", "CSS", "Bootstrap", "JavaScript", "Redux"],
+            link: "https://github.com/YuranyUlchur/screen-stream",
         },
         {
             id: 4,
             title: "Film Catalog",
-            imageSrc: renderToString(<BiMoviePlay style={{ color: 'white' }}/>),
+            imageSrc: 'img/pc.png',
             description: "Proyecto hecho para desarrollar habilidades y colocar en practica conocimientos",
-            Habilidades: ["HTML,", "CSS,", "React-Bootstrap,", "React.js y", "JavaScript."],
+            Habilidades: ["HTML", "CSS", "Bootstrap", "React.js", "JavaScript"],
             link: "https://github.com/YuranyUlchur/Project-film-catalog",
         },
     ];
@@ -50,55 +59,57 @@ const PortfolioSection = () => {
         setShowSkills((prevShowSkills) => !prevShowSkills);
     };
 
-
     return (
         <section id="portfolio">
             <h2 className={styles.pageSectionHeading}>Portafolio</h2>
             <div className='container my-4'>
-                <div className="row justify-content-around">
+                <div className="row">
                     {projects.map((project) => (
-                        <div key={project.id} className={`card col-md-4 mb-4 ${styles.cardProjects} `}
-                            style={{
-                                background: 'transparent',
-                                color: 'white',
-                                opacity: '1',
-                                border: '10px',
-                                overflow: 'hidden',
-                                transition: 'transform 0.3s ease',
-                                boxShadow: '0 4px 8px rgba(31, 226, 226, 0.322)',
-                            }}>
-                            <div className={`card-body text-center ${styles.transparentCard}`}>
-                                <img
-                                    className="card-img-top img-fluid"
-                                    src={`data:image/svg+xml,${encodeURIComponent(project.imageSrc)}`}
-                                    alt={project.title}
-                                    style={{
-                                        maxWidth: '50px',
-                                        maxHeight: '50px',
-                                        margin: ' auto',
-                                        display: 'block',
-                                   
-
-                                    }}
-                                />
-                                <h5 className="card-title">{project.title}</h5>
-                                <p className="card-text">{project.description}</p>
-                                <div className="d-flex flex-column align-items-center mt-auto">
-                                    <h6 onClick={handleSkillsClick} className={styles.skillsToggle}>
-                                        Habilidades {showSkills ? '▲' : '▼'}
-                                    </h6>
-                                    {showSkills && (
-                                        <div className={`${styles.skillsDropdown} mt-2`}>
-                                            <ul className="list-inline">
-                                                {project.Habilidades.map((skill) => (
-                                                    <li key={skill} className="list-inline-item">{skill}</li>
-                                                ))}
-                                            </ul>
+                        <div key={project.id} className={`col-md-6 mb-4`}>
+                            <div className={`card ${styles.cardProjects}`}
+                                style={{
+                                    background: 'transparent',
+                                    color: 'white',
+                                    opacity: '1',
+                                    border: '10px',
+                                    overflow: 'hidden',
+                                    transition: 'transform 0.3s ease',
+                                }}>
+                                <div className={`card-body ${styles.transparentCard}`}>
+                                    <div className="d-flex align-items-center m-2">
+                                        <div className={styles.iconContainer}>
+                                            <div className={styles.imageOverlay}>
+                                                <img src={project.imageSrc} alt={project.title} className={styles.projectImage} />
+                                            </div>
                                         </div>
-                                    )}
-                                    <a href={project.link} target="_blank" rel="noopener noreferrer">
-                                        <button className={styles.buttonlink}>Ver enlace del proyecto</button>
-                                    </a>
+                                        <div className="ms-3">
+                                            <a href={project.link} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
+                                                <h5 className={styles.projectTitle}>
+                                                    {project.title}
+                                                    <i className={`fas fa-paper-plane ${styles.icon}`}></i> {/* Icono de avión */}
+                                                </h5>
+                                            </a>
+                                            <p className="card-text">{project.description}</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="d-flex flex-column align-items-center mt-auto">
+                                        {skillImages && (
+                                            <div className={`${styles.skillsDropdown} mt-2`}>
+                                                <ul className="list-inline">
+                                                    {project.Habilidades.map((skill) => (
+                                                        <li key={skill} className="list-inline-item">
+                                                            <img
+                                                                src={skillImages[skill.trim().replace('', '')]}
+                                                                alt={skill}
+                                                                className={styles.skillImage}
+                                                            />
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </div>

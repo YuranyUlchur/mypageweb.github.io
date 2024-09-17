@@ -17,29 +17,103 @@
     margin-top: 10px;
 }
 
-.buttonlink {
-    display: block;
-    text-align: center;
-    justify-content: center;
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.buttonlink:hover {
-    background-color: #0056b3;
-}
-
 .pageSectionHeading {
-    font-size: 40px;
+    font-size:  2.5rem;
     font-weight: bold;
     margin-top: 100px;
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
     text-align: center;
     color: rgb(245, 245, 240);
+}
+
+.imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.projectImage {
+    width: 3rem;
+    position: relative;
+    z-index: 0;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.card-text {
+    color: white;
+}
+
+.cardProjects {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(86, 119, 211, 0.562);
+   
+}
+
+.cardProjects:hover {
+    transform: scale(1.05);
+}
+
+
+.card-text {
+    color: white;
+}
+
+.iconContainer {
+    border-radius: 50%;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skillImage {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border: 1px solid hsla(0,0%,100%,.2);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.transparentCard {
+    background-color: transparent;
+}
+
+.projectLink {
+    text-decoration: none;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.projectLink:hover {
+    color: #00bfff9c;
+}
+
+.projectTitle {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.icon {
+    margin-left: 8px;
+    font-size: 1rem;
 }

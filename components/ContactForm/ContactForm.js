@@ -42,12 +42,12 @@ const ContactForm = () => {
     return (
         <div className={style.containerForm} id="contact">
             <div className={style.formwrapper}>
-                <h1 className={style.formtitles}>Formulario de Contacto 📩</h1>
+                <h1 className={style.formtitle}>Formulario de Contacto 📩</h1>
                 {correoEnviado && <p>{mensaje}</p>}
                 <form onSubmit={enviarEmail}>
                     <div className={style.formrow}>
                         <div className={style.formgroup} >
-                            <h3 className={style.formtitles}>Tu nombre</h3>
+                            <h3 className={style.formsubtitle}>Tu nombre</h3>
                             <input
                                 type="text"
                                 className={style.formcontrol}
@@ -58,7 +58,7 @@ const ContactForm = () => {
                             />
                         </div>
                         <div className={style.formgroup}>
-                            <h3 className={style.formtitles}>Tu email</h3>
+                            <h3 className={style.formsubtitle}>Tu email</h3>
                             <input
                                 type="text"
                                 className={style.formcontrol}
@@ -70,7 +70,7 @@ const ContactForm = () => {
                         </div>
                     </div>
                     <div className={style.formgroup}>
-                        <h3 className={style.formtitles}>Mensaje</h3>
+                        <h3 className={style.formsubtitle}>Mensaje</h3>
                         <textarea
                             type="text"
                             className={style.formcontrol}
@@ -82,10 +82,9 @@ const ContactForm = () => {
                     </div>
                     <button type="submit" className={style.formbutton}>Enviar Correo</button>
                 </form>
-                <h6>Conectar con Yurany directamente por correo a través de este formulario.</h6>
+                <h6 className={style.formsubtitle}>Conectar con Yurany directamente por correo a través de este formulario.</h6>
             </div>
         </div>
     )
 }
-
 export { ContactForm }

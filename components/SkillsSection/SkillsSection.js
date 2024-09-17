@@ -6,6 +6,8 @@ import styles from './skillssection.module.css';
 const skillsData = {
     frontend: [
         { name: 'React', level: 'Avanzado', image: 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png' },
+        { name: 'WordPress', level: 'Avanzado', image: 'https://cdn-icons-png.flaticon.com/512/174/174881.png' },
+        { name: 'Bootstrap', level: 'Avanzado', image: 'https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg' },
         { name: 'HTML', level: 'Avanzado', image: 'https://cdn-icons-png.flaticon.com/512/174/174854.png' },
         { name: 'CSS', level: 'Intermedio', image: 'https://cdn-icons-png.flaticon.com/512/888/888847.png' },
         { name: 'Javascript', level: 'Intermedio', image: 'https://cdn-icons-png.flaticon.com/512/5968/5968292.png' },
