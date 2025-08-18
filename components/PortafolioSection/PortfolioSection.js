@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './portafolio.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-// Define the paths to the skill images
 const skillImages = {
     'C': 'img/c.png',
     'Bash': 'img/bash.png',
@@ -18,8 +16,6 @@ const skillImages = {
 };
 
 const PortfolioSection = () => {
-    const [showSkills, setShowSkills] = useState(null);
-
     const projects = [
         {
             id: 1,
@@ -55,61 +51,42 @@ const PortfolioSection = () => {
         },
     ];
 
-    const handleSkillsClick = () => {
-        setShowSkills((prevShowSkills) => !prevShowSkills);
-    };
-
     return (
-        <section id="portfolio">
+        <section id='portafolio' className={styles.portafolio}>
             <h2 className={styles.pageSectionHeading}>Portafolio</h2>
-            <div className='container my-4'>
-                <div className="row">
+            <div className={styles.portfolioGridContainer}>
+                <div className={styles.portfolioGrid}>
                     {projects.map((project) => (
-                        <div key={project.id} className={`col-md-6 mb-4`}>
-                            <div className={`card ${styles.cardProjects}`}
-                                style={{
-                                    background: 'transparent',
-                                    color: 'white',
-                                    opacity: '1',
-                                    border: '10px',
-                                    overflow: 'hidden',
-                                    transition: 'transform 0.3s ease',
-                                }}>
-                                <div className={`card-body ${styles.transparentCard}`}>
-                                    <div className="d-flex align-items-center m-2">
-                                        <div className={styles.iconContainer}>
-                                            <div className={styles.imageOverlay}>
-                                                <img src={project.imageSrc} alt={project.title} className={styles.projectImage} />
-                                            </div>
-                                        </div>
-                                        <div className="ms-3">
-                                            <a href={project.link} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
-                                                <h5 className={styles.projectTitle}>
-                                                    {project.title}
-                                                    <i className={`fas fa-paper-plane ${styles.icon}`}></i> {/* Icono de avión */}
-                                                </h5>
-                                            </a>
-                                            <p className="card-text">{project.description}</p>
+                        <div key={project.id} className={styles.projectCard}>
+                            <div className={styles.cardContent}>
+                                <div className={styles.projectHeader}>
+                                    <div className={styles.iconContainer}>
+                                        <div className={styles.imageOverlay}>
+                                            <img src={project.imageSrc} alt={project.title} className={styles.projectImage} />
                                         </div>
                                     </div>
-
-                                    <div className="d-flex flex-column align-items-center mt-auto">
-                                        {skillImages && (
-                                            <div className={`${styles.skillsDropdown} mt-2`}>
-                                                <ul className="list-inline">
-                                                    {project.Habilidades.map((skill) => (
-                                                        <li key={skill} className="list-inline-item">
-                                                            <img
-                                                                src={skillImages[skill.trim().replace('', '')]}
-                                                                alt={skill}
-                                                                className={styles.skillImage}
-                                                            />
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                        )}
+                                    <div className={styles.projectInfo}>
+                                        <a href={project.link} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
+                                            <h5 className={styles.projectTitle}>
+                                                {project.title}
+                                                <i className={`fas fa-paper-plane ${styles.icon}`}></i>
+                                            </h5>
+                                        </a>
+                                        <p className={styles.projectDescription}>{project.description}</p>
                                     </div>
+                                </div>
+                                <div className={styles.skillsWrapper}>
+                                    <ul className={styles.skillsList}>
+                                        {project.Habilidades.map((skill) => (
+                                            <li key={skill} className={styles.skillItem}>
+                                                <img
+                                                    src={skillImages[skill]}
+                                                    alt={skill}
+                                                    className={styles.skillImageSmall}
+                                                />
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
                             </div>
                         </div>

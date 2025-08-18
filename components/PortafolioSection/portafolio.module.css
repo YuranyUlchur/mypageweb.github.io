@@ -1,98 +1,83 @@
-.pageSectionHeading {
-    font-size: 40px;
-    font-weight: bold;
-    margin-top: 100px;
-    text-align: center;
-    color: rgb(245, 245, 240);
-
-}
-.skillsToggle {
-    cursor: pointer;
-    color: #007bff;
-}
-
-.skillsDropdown {
-    max-height: 200px;
-    overflow-y: auto;
-    margin-top: 10px;
-}
-
-.pageSectionHeading {
-    font-size:  2.5rem;
-    font-weight: bold;
-    margin-top: 100px;
-    margin-bottom: 2rem;
-    text-align: center;
-    color: rgb(245, 245, 240);
-}
-
-.imageOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+.portafolio {
+    background-color: rgb(21, 0, 59);
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: white;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    border-radius: 50%;
 }
 
-.projectImage {
-    width: 3rem;
-    position: relative;
-    z-index: 0;
-}
-
-.card-title {
-    font-size: 1.5rem;
+.pageSectionHeading {
+    font-size: 20px;
     font-weight: bold;
-    color: white;
+    text-align: center;
+    color: rgb(245, 245, 240);
 }
 
-.card-text {
-    color: white;
+.portfolioGridContainer {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.cardProjects {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(86, 119, 211, 0.562);
-   
+.portfolioGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    justify-content: center;
 }
 
-.cardProjects:hover {
-    transform: scale(1.05);
+.projectCard {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3), 0 0 10px rgba(95, 51, 121, 0.4);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
+.projectCard:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(95, 51, 121, 0.6);
+}
 
-.card-text {
-    color: white;
+.cardContent {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.projectHeader {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
 }
 
 .iconContainer {
     border-radius: 50%;
-    position: relative;
-    width: 60px;
-    height: 60px;
-    background-color: black;
+    width: 65px;
+    height: 65px;
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
+    margin-right: 20px;
+    box-shadow: inset 0 0 8px rgba(95, 51, 121, 0.6);
 }
 
-.skillImage {
-    width: 40px;
-    height: 40px;
-    background-color: black;
-    border: 1px solid hsla(0,0%,100%,.2);
-    border-radius: 50%;
-    padding: 5px;
+.projectImage {
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: contain;
 }
 
-.transparentCard {
-    background-color: transparent;
+.projectInfo {
+    flex-grow: 1;
 }
 
 .projectLink {
@@ -104,16 +89,209 @@
 }
 
 .projectLink:hover {
-    color: #00bfff9c;
+    color: #a06de0;
 }
 
 .projectTitle {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 700;
     margin-bottom: 8px;
-    font-weight: bold;
+    line-height: 1.3;
 }
 
 .icon {
-    margin-left: 8px;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+.projectLink:hover .icon {
+    color: #a06de0;
+}
+
+.projectDescription {
+    color: rgba(255, 255, 255, 0.85);
     font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.skillsWrapper {
+    margin-top: auto;
+    text-align: center;
+}
+
+.skillsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skillItem {
+    flex-shrink: 0;
+}
+
+.skillImageSmall {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    padding: 6px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.skillImageSmall:hover {
+    transform: translateY(-3px) scale(1.1);
+    background-color: rgba(95, 51, 121, 0.7);
+}
+
+/* Media Queries */
+
+@media (min-width: 1200px) {
+    .pageSectionHeading {
+        font-size: 55px;
+    }
+
+    .portfolioGridContainer {
+        padding: 0 40px;
+    }
+
+    .portfolioGrid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .projectTitle {
+        font-size: 1rem;
+    }
+
+    .projectDescription {
+        font-size: 1rem;
+    }
+
+    .skillImageSmall {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .pageSectionHeading {
+        font-size: 65px;
+        margin-bottom: 50px;
+    }
+
+    .portfolioGridContainer {
+        max-width: 1600px;
+    }
+
+    .portfolioGrid {
+        grid-template-columns: repeat(2, minmax(450px, 1fr));
+        max-width: 1200px;
+        gap: 80px;
+    }
+
+    .projectCard {
+        padding: 15px;
+    }
+
+    .projectTitle {
+        font-size: 2rem;
+    }
+
+    .projectDescription {
+        font-size: 1.2rem;
+    }
+
+    .skillImageSmall {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .pageSectionHeading {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .portfolioGrid {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    .projectCard {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .projectHeader {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .iconContainer {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .projectTitle {
+        font-size: 1.4rem;
+    }
+
+    .projectDescription {
+        font-size: 0.95rem;
+    }
+
+    .skillImageSmall {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pageSectionHeading {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .projectCard {
+        padding: 15px;
+    }
+
+    .projectImage {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .iconContainer {
+        width: 60px;
+        height: 60px;
+    }
+
+    .projectTitle {
+        font-size: 1.3rem;
+    }
+
+    .projectDescription {
+        font-size: 0.9rem;
+    }
+
+    .skillImageSmall {
+        width: 32px;
+        height: 32px;
+    }
+
+
 }

@@ -5,22 +5,19 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    margin-bottom: 100px;
-
+    background-color: rgb(21 0 59);
 }
 
 .pageSectionHeadingSkills {
     font-size: 40px;
     font-weight: bold;
-    margin-top: 160px;
     text-align: center;
     color: rgb(245, 245, 240);
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .categorySelector {
     display: flex;
-    margin-bottom: 20px;
 }
 
 .row {
@@ -29,11 +26,9 @@
     flex-wrap: wrap;
 }
 
-
 .skillImage {
     width: 90px;
     height: auto;
-
 }
 
 .skillInfo {
@@ -44,13 +39,12 @@
 }
 
 .colMd4 {
-    width: 30%;
     padding: 15px;
     box-sizing: border-box;
 }
 
 .categoryButton {
-    background: #3498db;
+    background: #944cbdc4;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -59,15 +53,15 @@
 }
 
 .categoryButton:hover {
-    background: #3498db;
+    background: #7640968f;
 }
 
 .categoryButton.active {
-    background: #256d83;
+    background: #7640968f;
 }
 
 .card {
-    box-shadow: 0 4px 8px rgba(31, 226, 226, 0.322);
+    box-shadow: 0 4px 8px rgba(95, 51, 121, 0.562);
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -78,7 +72,7 @@
 }
 
 .cardBody {
-    padding: 20px;
+    padding: 10px;
     display: flex;
     align-items: center;
 
@@ -86,20 +80,19 @@
 
 .cardTitle {
     color: rgb(245, 245, 240);
-    margin-bottom: 10px;
+    margin-top: 1rem;
 }
 
 .cardText {
     color: rgb(245, 245, 240);
 }
 
+/* Media Queries */
+
 @media (max-width: 768px) {
 
     .pageSectionHeadingSkills {
         margin-top: 400px;
-    }
-    .colMd4 {
-        width: 100%;
     }
 
     .categorySelector {
@@ -112,8 +105,15 @@
         margin-bottom: 10px;
     }
 
-    .card {
-        width: 100%;
+
+}
+
+@media (max-height: 1240px) {
+    .container {
+        height: 100vh;
     }
 
+    .colMd4 {
+        width: 30%;
+    }
 }

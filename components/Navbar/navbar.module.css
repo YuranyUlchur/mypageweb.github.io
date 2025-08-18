@@ -1,12 +1,23 @@
 .navbar {
-    padding: 20px 0;
-    font-family: Muli, sans-serif
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; 
+  padding: 10px 20px;
+}
+
+
+.logo {
+    height: 6rem;
 }
 
 .navbarBrand {
     color: #fff;
-    font-size: 24px;
-    text-decoration: none;
+    font-size: 30px;
+    font-family: Mosk, sans-serif;
+    font-weight: bold;
+
 }
 
 .navLink {
@@ -42,6 +53,61 @@
     margin-right: 20px;
 }
 
+
+.navbarBrand {
+    color: #fff;
+    font-size: 25px;
+    font-family: monospace;
+
+}
+
+.navLink {
+    color: white;
+    text-decoration: none;
+    font-size: 19px;
+
+}
+
+.navLink:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containernav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.containernav li {
+    margin-right: 20px;
+}
+
+.scrollTopButton {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: #333;
+}
+
+/* Media Queries */
+
 @media (max-width: 768px) {
     .navbar {
         padding: 15px 0;
@@ -63,5 +129,25 @@
         margin-right: 0;
         margin-bottom: 10px;
     }
-}
 
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .navbarBrand {
+        font-size: 20px;
+    }
+
+    .containernav {
+        flex-direction: column;
+    }
+
+    .containernav ul {
+        margin-bottom: 10px;
+    }
+
+    .containernav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

@@ -1,90 +1,59 @@
-import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
-import style from './contactform.module.css';
+import React from 'react';
+import styles from './contactform.module.css';
+import { FaTwitter, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
 const ContactForm = () => {
-    const [mensaje, setMensaje] = useState('');
-    const [correoEnviado, setCorreoEnviado] = useState(false);
+  return (
+    <section className={styles.contact} id="contact">
+      <div className={styles.content}>
+        <div className={styles.textBlock}>
+          <h2 className={styles.title}>Siempre estoy dispuesta a charlar.</h2>
+          <p className={styles.subtitle}>
+            <strong>Envíame un correo electrónico</strong> a
+          </p>
+          <a href="mailto:ulchuryurani80@gmail.com" className={styles.email}>
+            ulchuryurani80@gmail.com
+          </a>
+          <p className={styles.subtitle}>o escribeme en las redes sociales.</p>
 
-    const initialState = {
-        nombre: '',
-        email: '',
-        mensaje: ''
-    };
-
-    const [formularioData, setFormularioData] = useState(initialState);
-
-    const enviarEmail = (e) => {
-        e.preventDefault();
-
-        emailjs.sendForm('service_bjhzas4', 'template_lgy35qu', e.target, 'TtFg-nquvygZzG046')
-            .then((res) => {
-                console.log(res);
-                setMensaje('Correo enviado con éxito✔️');
-                setCorreoEnviado(true);
-                setFormularioData(initialState);
-            })
-            .catch((error) => {
-                console.error(error);
-                setMensaje('Error al enviar el correo ❌');
-                setCorreoEnviado(true);
-            });
-    };
-
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormularioData({
-            ...formularioData,
-            [name]: value
-        });
-    };
-
-    return (
-        <div className={style.containerForm} id="contact">
-            <div className={style.formwrapper}>
-                <h1 className={style.formtitle}>Formulario de Contacto 📩</h1>
-                {correoEnviado && <p>{mensaje}</p>}
-                <form onSubmit={enviarEmail}>
-                    <div className={style.formrow}>
-                        <div className={style.formgroup} >
-                            <h3 className={style.formsubtitle}>Tu nombre</h3>
-                            <input
-                                type="text"
-                                className={style.formcontrol}
-                                id="nombre"
-                                name="nombre"
-                                value={formularioData.nombre}
-                                onChange={handleInputChange}
-                            />
-                        </div>
-                        <div className={style.formgroup}>
-                            <h3 className={style.formsubtitle}>Tu email</h3>
-                            <input
-                                type="text"
-                                className={style.formcontrol}
-                                id="email"
-                                name="email"
-                                value={formularioData.email}
-                                onChange={handleInputChange}
-                            />
-                        </div>
-                    </div>
-                    <div className={style.formgroup}>
-                        <h3 className={style.formsubtitle}>Mensaje</h3>
-                        <textarea
-                            type="text"
-                            className={style.formcontrol}
-                            id="mensaje"
-                            name="mensaje"
-                            value={formularioData.mensaje}
-                            onChange={handleInputChange}
-                        ></textarea>
-                    </div>
-                    <button type="submit" className={style.formbutton}>Enviar Correo</button>
-                </form>
-                <h6 className={style.formsubtitle}>Conectar con Yurany directamente por correo a través de este formulario.</h6>
-            </div>
+          <div className={styles.socials}>
+            <a
+              href="https://github.com/YuranyUlchur"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.icon}
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/yuranyulchur/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.icon}
+            >
+              <FaLinkedinIn />
+            </a>
+                        <a
+              href="https://twitter.com/YuranyUlchur"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.icon}
+            >
+              <FaTwitter />
+            </a>
+          </div>
         </div>
-    )
-}
-export { ContactForm }
+
+        <div className={styles.imageBlock}>
+          <img
+            src="img/animacion.png"
+            alt="Ilustración Yurany"
+            className={styles.avatar}
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export { ContactForm };
