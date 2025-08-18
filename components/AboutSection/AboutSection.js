@@ -9,7 +9,7 @@ const AboutSection = () => {
                 <div className={styles.row}>
                     <div className={styles.avatarBox}>
                         <img src="img/avatar.png"
-                            alt="Ilustración de desarrolladora de software, mente creativa"
+                            alt="Ilustración de desarrolladora de software"
                             className={styles.avatar}
                         />
                         <div className={styles.avatarCaption}>
