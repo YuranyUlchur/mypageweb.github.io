@@ -13,7 +13,7 @@ const HeaderSection = () => {
 
             <div className={styles.container}>
                 <div className={styles.illustration} aria-hidden="true">
-                    <img src="/img/hero-purple.png" alt="" aria-hidden="true" />
+                    <img src="/img/banner.png" alt="" aria-hidden="true" />
                 </div>
 
                 <div className={styles.content}>
