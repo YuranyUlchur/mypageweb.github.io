@@ -96,14 +96,47 @@
 }
 
 .scrollTopButton {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    background: #fff;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    color: #333;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  color: #f4f4f4;
+  cursor: pointer;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.scrollTopButton::before{
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 30px;
+  padding: 2px;
+  background: linear-gradient(90deg, #ffd36b, #c77aa6, #73e6c2); /* accent-1, accent-2, extra */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.95;
+  pointer-events: none;
+  filter: blur(6px);
+  z-index: -1;
+  animation: hueShift 6s linear infinite;
+}
+
+.scrollTopButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+}
+.scrollTopButton:active {
+  transform: translateY(0);
 }
 
 /* Media Queries */

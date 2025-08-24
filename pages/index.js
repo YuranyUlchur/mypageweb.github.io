@@ -7,7 +7,7 @@ import { ContactForm } from '../components/ContactForm/ContactForm';
 import { SkillsSection } from '../components/SkillsSection/SkillsSection';
 
 
-const App = () => {
+const Home = () => {
     return (
         <>
             <Head>
@@ -27,4 +27,4 @@ const App = () => {
 };
 
 
-export default App;
+export default Home;

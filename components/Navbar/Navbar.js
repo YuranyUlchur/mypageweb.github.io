@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Navbar as BootstrapNavbar, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './navbar.module.css';
 
 const Navbar = () => {
+    const handleScrollTop = useCallback(() => {
+        if (typeof window !== 'undefined') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }, []);
+
     return (
         <BootstrapNavbar bg="transparent" variant="dark" expand="lg" className={styles.navbar}>
             <BootstrapNavbar.Brand href="#page-top" className={` px-5 ${styles.navbarBrand}`}>
@@ -14,7 +20,6 @@ const Navbar = () => {
                         className={styles.logo}
                     />
                 </div>
-                <button className={styles.scrollTopButton}>↑</button>
             </BootstrapNavbar.Brand>
             <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
             <BootstrapNavbar.Collapse id="basic-navbar-nav" className={`justify-content-end ${styles.containernav} px-5`}>
@@ -25,6 +30,14 @@ const Navbar = () => {
                     <Nav.Link href="#contact" className={styles.navLink}>Contacto</Nav.Link>
                 </Nav>
             </BootstrapNavbar.Collapse>
+            <button
+                type="button"
+                className={styles.scrollTopButton}
+                onClick={handleScrollTop}
+                aria-label="Volver arriba"
+            >
+                ↑
+            </button>
         </BootstrapNavbar>
     );
 };
