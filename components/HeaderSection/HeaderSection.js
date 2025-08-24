@@ -26,7 +26,7 @@ const HeaderSection = () => {
                         <a
                             href="/img/CV.pdf"
                             className={styles.btn}
-                            download="CV_Yurany_Ulchur.pdf"
+                            download="CV.pdf"
                         >
                             Descargar CV
                             <FontAwesomeIcon icon={faDownload} className={styles.icon} />
